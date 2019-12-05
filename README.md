@@ -1,8 +1,9 @@
 ## 社区
 
 ## 资料
-https://spring.io/guides/gs/serving-web-content/
-https://www.bootcss.com/
-https://square.github.io/okhttp/
+[Spring document]https://spring.io/guides/gs/serving-web-content/
+[Bootstrap]https://www.bootcss.com/
+[Okhttp]https://square.github.io/okhttp/
+[Github OAuth]
 ## 工具
-https://git-scm.com/downloads
+[Git]https://git-scm.com/downloads
