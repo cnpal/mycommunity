@@ -13,4 +13,5 @@
 ```$xslt
 mvn flyway:migrate
 mvn flyway:clean
+mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate
 ```
