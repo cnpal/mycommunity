@@ -12,4 +12,5 @@
 ##脚本
 ```$xslt
 mvn flyway:migrate
+mvn flyway:clean
 ```
