@@ -3,7 +3,6 @@ package com.pal.community.controller;
 import com.pal.community.dto.QuestionDTO;
 import com.pal.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +17,8 @@ public class QuestionController {
     public String question(@PathVariable(name = "id") Integer id,
                             Model model){
         QuestionDTO questionDTO = questionService.getById(id);
+//        累计阅读数
+        questionService.incView(id);
         model.addAttribute("question",questionDTO);
         return "question";
     }
