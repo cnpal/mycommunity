@@ -20,4 +20,10 @@
         set VIEW_COUNT = VIEW_COUNT + #{viewCount,jdbcType=INTEGER}
         where ID = #{id}
     </update>
+    <update id="incComment" parameterType="com.pal.community.model.Question">
+
+        update QUESTION
+        set COMMENT_COUNT = COMMENT_COUNT + #{commentCount,jdbcType=INTEGER}
+        where ID = #{id}
+    </update>
 </mapper>

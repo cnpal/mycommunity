@@ -1,7 +1,6 @@
 package com.pal.community.controller;
 
 import com.pal.community.dto.QuestionDTO;
-import com.pal.community.mapper.QuestionMapper;
 import com.pal.community.model.Question;
 import com.pal.community.model.User;
 import com.pal.community.service.QuestionService;
@@ -29,7 +28,7 @@ public class PublishController {
     public String doPublish(@RequestParam("title") String title,
                             @RequestParam("description") String description,
                             @RequestParam("tag") String tag,
-                            @RequestParam("id") Integer id,
+                            @RequestParam("id") Long id,
                             HttpServletRequest request,
                             Model model
     ) {
@@ -64,7 +63,7 @@ public class PublishController {
         return "redirect:/";
     }
     @GetMapping("/publish/{id}")
-    public String edit(@PathVariable(name = "id") Integer id,
+    public String edit(@PathVariable(name = "id") Long id,
                        Model model){
         QuestionDTO question = questionService.getById(id);
         model.addAttribute("title", question.getTitle());

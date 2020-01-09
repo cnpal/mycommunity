@@ -9,6 +9,15 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/bootstrap.min.js" type="application/javascript"></script>
 </head>
+<script type="application/javascript">
+    window.onload = function () {
+        var closable = window.localStorage.getItem("closable");
+        if (closable == "true") {
+            window.close();
+            window.localStorage.removeItem("closable");
+        }
+    }
+</script>
 <body>
 <div th:insert="navigation :: nav"></div>
 <div class="container-fluid main">
@@ -44,7 +53,7 @@
                             <span aria-hidden="true">&lt;</span>
                         </a>
                     </li>
-                    <li th:each="page:${pagination.pages}"  th:class="${pagination.page==page} ? 'active':''">
+                    <li th:each="page:${pagination.pages}" th:class="${pagination.page==page} ? 'active':''">
                         <a th:href="@{/(page=${page})}" th:text="${page}"></a>
                     </li>
                     <li th:if="${pagination.showNext}">

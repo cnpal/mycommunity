@@ -9,6 +9,7 @@
 ## 工具
 [Git](https://git-scm.com/downloads)
 
+[Postman](https://chrome.google.com/webstore/detail/tabbed-postman-rest-clien/coohjcphdfgbiolnekdpbcijmhambjff)
 ##脚本
 ```$xslt
 mvn flyway:migrate
