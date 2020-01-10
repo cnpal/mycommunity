@@ -18,5 +18,6 @@ public class CommentDTO {
     private Long parentId;
     private String content;
     private Integer type;
+    private Integer commentCount;
     private User user;
 }
