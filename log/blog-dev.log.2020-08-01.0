@@ -1,0 +1,264 @@
+2020-08-01 14:05:26.374  INFO 12136 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 12136 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-01 14:05:26.377 DEBUG 12136 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-01 14:05:26.378  INFO 12136 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-01 14:05:28.448  INFO 12136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-01 14:05:28.458  INFO 12136 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-01 14:05:28.458  INFO 12136 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-01 14:05:28.618  INFO 12136 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-01 14:05:28.618  INFO 12136 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2200 ms
+2020-08-01 14:05:29.390  INFO 12136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 14:05:29.458  INFO 12136 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-01 14:05:29.972  INFO 12136 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-01 14:05:29.976  INFO 12136 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 4.232 seconds (JVM running for 5.766)
+2020-08-01 14:05:50.329  INFO 12136 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-01 14:05:50.334  INFO 12136 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-01 14:05:50.334  INFO 12136 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-01 14:05:50.343  INFO 12136 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-08-01 14:05:50.369  INFO 12136 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.IndexController.index', args=[org.apache.catalina.connector.RequestFacade@7cf98fb, {}, 1, 5]}
+2020-08-01 14:05:50.413  INFO 12136 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-01 14:05:50.662  INFO 12136 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-01 14:05:50.668 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION 
+2020-08-01 14:05:50.678 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2020-08-01 14:05:50.688 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-01 14:05:50.692 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION order by gmt_create desc 
+2020-08-01 14:05:50.693 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-08-01 14:05:50.695 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.Q.selectByExampleWithRowbounds   : <==      Total: 3
+2020-08-01 14:05:50.695 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-01 14:05:50.697 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-01 14:05:50.698 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-01 14:05:50.703 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-01 14:05:50.703 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-01 14:05:50.703 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-01 14:05:50.704 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-01 14:05:50.704 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-01 14:05:50.704 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-01 14:05:50.705  INFO 12136 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : index
+2020-08-01 14:05:52.753  INFO 12136 --- [http-nio-80-exec-10] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/error', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.CustomizeErrorController.errorHtml', args=[org.apache.catalina.core.ApplicationHttpRequest@551d9ecd, {}]}
+2020-08-01 14:05:52.755  INFO 12136 --- [http-nio-80-exec-10] com.pal.community.aspect.LogAspect       : Result : ModelAndView [view="error"; model=null]
+2020-08-01 14:05:57.032  INFO 12136 --- [http-nio-80-exec-8] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/callback', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.AuthorizeController.callback', args=[ac7251a0ae71063ba66a, 1, org.apache.catalina.connector.RequestFacade@1ac3667e, org.apache.catalina.connector.ResponseFacade@7b80beea]}
+2020-08-01 14:06:03.132 DEBUG 12136 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-08-01 14:06:03.132 DEBUG 12136 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 56571425(String)
+2020-08-01 14:06:03.133 DEBUG 12136 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:06:03.136 DEBUG 12136 --- [http-nio-80-exec-8] c.p.c.m.U.updateByExampleSelective       : ==>  Preparing: update USER SET NAME = ?, TOKEN = ?, GMT_MODIFIED = ?, BIO = ?, AVATAR_URL = ? WHERE ( ID = ? ) 
+2020-08-01 14:06:03.137 DEBUG 12136 --- [http-nio-80-exec-8] c.p.c.m.U.updateByExampleSelective       : ==> Parameters: 小白(String), 17f59263-9d05-4ec3-903f-beae40eecd2a(String), 1596261963133(Long), keep coding(String), https://avatars0.githubusercontent.com/u/56571425?v=4(String), 2(Long)
+2020-08-01 14:06:03.236 DEBUG 12136 --- [http-nio-80-exec-8] c.p.c.m.U.updateByExampleSelective       : <==    Updates: 1
+2020-08-01 14:06:03.236  INFO 12136 --- [http-nio-80-exec-8] com.pal.community.aspect.LogAspect       : Result : redirect:/
+2020-08-01 14:06:03.252 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:06:03.253 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:06:03.254 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:06:03.598  WARN 12136 --- [http-nio-80-exec-9] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [332] milliseconds.
+2020-08-01 14:06:03.600  INFO 12136 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.IndexController.index', args=[org.apache.catalina.connector.RequestFacade@1ac3667e, {}, 1, 5]}
+2020-08-01 14:06:03.600 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION 
+2020-08-01 14:06:03.600 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2020-08-01 14:06:03.600 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-01 14:06:03.601 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION order by gmt_create desc 
+2020-08-01 14:06:03.601 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-08-01 14:06:03.601 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.Q.selectByExampleWithRowbounds   : <==      Total: 3
+2020-08-01 14:06:03.602 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-01 14:06:03.602 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-01 14:06:03.602 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-01 14:06:03.602 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-01 14:06:03.603 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-01 14:06:03.603 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-01 14:06:03.603 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-01 14:06:03.603 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-01 14:06:03.603 DEBUG 12136 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-01 14:06:03.604  INFO 12136 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Result : index
+2020-08-01 14:06:09.726 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:06:09.727 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:06:09.728 DEBUG 12136 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:06:09.728  INFO 12136 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:06:09.731  INFO 12136 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:06:50.945 DEBUG 12136 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:06:50.945 DEBUG 12136 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:06:50.946 DEBUG 12136 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:06:50.946 DEBUG 12136 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:06:50.947 DEBUG 12136 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:06:50.948 DEBUG 12136 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:09:17.378  INFO 10484 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 10484 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-01 14:09:17.381 DEBUG 10484 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-01 14:09:17.381  INFO 10484 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-01 14:09:18.349  INFO 10484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-01 14:09:18.356  INFO 10484 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-01 14:09:18.357  INFO 10484 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-01 14:09:18.413  INFO 10484 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-01 14:09:18.413  INFO 10484 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 987 ms
+2020-08-01 14:09:18.889  INFO 10484 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 14:09:18.954  INFO 10484 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-01 14:09:19.464  INFO 10484 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-01 14:09:19.468  INFO 10484 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 2.478 seconds (JVM running for 3.317)
+2020-08-01 14:09:30.586  INFO 10484 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651; token=17f59263-9d05-4ec3-903f-beae40eecd2a; JSESSIONID=DC8EA5676ADD5C4211B469B32D4F8000] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-01 14:09:30.595  INFO 10484 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-01 14:09:30.595  INFO 10484 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-01 14:09:30.603  INFO 10484 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-01 14:09:30.637  INFO 10484 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-01 14:09:30.711  INFO 10484 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-01 14:09:30.716 DEBUG 10484 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:09:30.727 DEBUG 10484 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:09:30.735 DEBUG 10484 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:09:31.041  WARN 10484 --- [http-nio-80-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [297] milliseconds.
+2020-08-01 14:09:31.048  INFO 10484 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:09:31.052  INFO 10484 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:09:31.242 DEBUG 10484 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:09:31.243 DEBUG 10484 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:09:31.244 DEBUG 10484 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:09:33.952 DEBUG 10484 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:09:33.952 DEBUG 10484 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:09:33.953 DEBUG 10484 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:09:33.954  INFO 10484 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:09:33.954  INFO 10484 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:11:17.979  INFO 1000 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 1000 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-01 14:11:17.981 DEBUG 1000 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-01 14:11:17.982  INFO 1000 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-01 14:11:18.816  INFO 1000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-01 14:11:18.821  INFO 1000 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-01 14:11:18.821  INFO 1000 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-01 14:11:18.881  INFO 1000 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-01 14:11:18.881  INFO 1000 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 837 ms
+2020-08-01 14:11:19.298  INFO 1000 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 14:11:19.357  INFO 1000 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-01 14:11:19.829  INFO 1000 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-01 14:11:19.832  INFO 1000 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 2.152 seconds (JVM running for 2.992)
+2020-08-01 14:11:25.239  INFO 1000 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651; token=17f59263-9d05-4ec3-903f-beae40eecd2a; JSESSIONID=20F1A752087F7BE322F2A5D09533E5CF] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-01 14:11:25.244  INFO 1000 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-01 14:11:25.245  INFO 1000 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-01 14:11:25.252  INFO 1000 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-01 14:11:25.289  INFO 1000 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-01 14:11:25.362  INFO 1000 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-01 14:11:25.367 DEBUG 1000 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:11:25.378 DEBUG 1000 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:11:25.387 DEBUG 1000 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:11:25.686  WARN 1000 --- [http-nio-80-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [293] milliseconds.
+2020-08-01 14:11:25.693  INFO 1000 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:11:25.696  INFO 1000 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:11:25.879 DEBUG 1000 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:11:25.880 DEBUG 1000 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:11:25.880 DEBUG 1000 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:11:34.695 DEBUG 1000 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:11:34.696 DEBUG 1000 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:11:34.696 DEBUG 1000 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:11:34.696  INFO 1000 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:11:34.696  INFO 1000 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:15:21.851  INFO 7948 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 7948 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-01 14:15:21.853 DEBUG 7948 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-01 14:15:21.853  INFO 7948 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-01 14:15:22.718  INFO 7948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-01 14:15:22.722  INFO 7948 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-01 14:15:22.723  INFO 7948 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-01 14:15:22.778  INFO 7948 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-01 14:15:22.778  INFO 7948 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 891 ms
+2020-08-01 14:15:23.167  INFO 7948 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 14:15:23.226  INFO 7948 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-01 14:15:23.709  INFO 7948 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-01 14:15:23.711  INFO 7948 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 2.174 seconds (JVM running for 3.021)
+2020-08-01 14:15:32.085  INFO 7948 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651; token=17f59263-9d05-4ec3-903f-beae40eecd2a; JSESSIONID=86E8C43DFD04271EC7F3DB2E780A8CBA] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-01 14:15:32.094  INFO 7948 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-01 14:15:32.094  INFO 7948 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-01 14:15:32.102  INFO 7948 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-08-01 14:15:32.137  INFO 7948 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-01 14:15:32.211  INFO 7948 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-01 14:15:32.216 DEBUG 7948 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:15:32.227 DEBUG 7948 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:15:32.236 DEBUG 7948 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:15:32.547  WARN 7948 --- [http-nio-80-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [300] milliseconds.
+2020-08-01 14:15:32.554  INFO 7948 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:15:32.557  INFO 7948 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:15:32.733 DEBUG 7948 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:15:32.734 DEBUG 7948 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:15:32.734 DEBUG 7948 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:18:45.062 DEBUG 7948 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:18:45.063 DEBUG 7948 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:18:45.063 DEBUG 7948 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:18:45.063  INFO 7948 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:18:45.063  INFO 7948 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:18:45.082 DEBUG 7948 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:18:45.083 DEBUG 7948 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:18:45.084 DEBUG 7948 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:20:14.848  INFO 2108 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 2108 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-01 14:20:14.850 DEBUG 2108 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-01 14:20:14.851  INFO 2108 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-01 14:20:15.720  INFO 2108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-01 14:20:15.726  INFO 2108 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-01 14:20:15.726  INFO 2108 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-01 14:20:15.779  INFO 2108 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-01 14:20:15.780  INFO 2108 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 889 ms
+2020-08-01 14:20:16.213  INFO 2108 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 14:20:16.275  INFO 2108 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-01 14:20:16.776  INFO 2108 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-01 14:20:16.778  INFO 2108 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 2.218 seconds (JVM running for 3.011)
+2020-08-01 14:20:25.035  INFO 2108 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651; token=17f59263-9d05-4ec3-903f-beae40eecd2a; JSESSIONID=C6963D2B652F2AF79CFE4B6AF314FDA5] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-01 14:20:25.044  INFO 2108 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-01 14:20:25.044  INFO 2108 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-01 14:20:25.051  INFO 2108 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-01 14:20:25.088  INFO 2108 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-01 14:20:25.162  INFO 2108 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-01 14:20:25.166 DEBUG 2108 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:20:25.177 DEBUG 2108 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:20:25.186 DEBUG 2108 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:20:25.483  WARN 2108 --- [http-nio-80-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [291] milliseconds.
+2020-08-01 14:20:25.490  INFO 2108 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:20:25.493  INFO 2108 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:20:25.680 DEBUG 2108 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:20:25.681 DEBUG 2108 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:20:25.681 DEBUG 2108 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:21:14.405  INFO 7752 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 7752 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-01 14:21:14.408 DEBUG 7752 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-01 14:21:14.409  INFO 7752 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-01 14:21:15.198  INFO 7752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-01 14:21:15.203  INFO 7752 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-01 14:21:15.203  INFO 7752 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-01 14:21:15.255  INFO 7752 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-01 14:21:15.255  INFO 7752 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 803 ms
+2020-08-01 14:21:15.645  INFO 7752 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 14:21:15.704  INFO 7752 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-01 14:21:16.145  INFO 7752 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-01 14:21:16.147  INFO 7752 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 2.002 seconds (JVM running for 2.781)
+2020-08-01 14:21:24.400  INFO 7752 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651; token=17f59263-9d05-4ec3-903f-beae40eecd2a; JSESSIONID=5B9E19E5F9FB5D4CB916B3B00FCE5F85] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-01 14:21:24.406  INFO 7752 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-01 14:21:24.407  INFO 7752 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-01 14:21:24.414  INFO 7752 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-01 14:21:24.449  INFO 7752 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-01 14:21:24.521  INFO 7752 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-01 14:21:24.526 DEBUG 7752 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:21:24.537 DEBUG 7752 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:21:24.545 DEBUG 7752 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:21:24.854  WARN 7752 --- [http-nio-80-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [303] milliseconds.
+2020-08-01 14:21:24.861  INFO 7752 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:21:24.865  INFO 7752 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:21:25.048 DEBUG 7752 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:21:25.048 DEBUG 7752 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:21:25.049 DEBUG 7752 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:58:50.710  INFO 2648 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 2648 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-01 14:58:50.713 DEBUG 2648 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-01 14:58:50.713  INFO 2648 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-01 14:58:51.610  INFO 2648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-01 14:58:51.615  INFO 2648 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-01 14:58:51.616  INFO 2648 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-01 14:58:51.668  INFO 2648 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-01 14:58:51.668  INFO 2648 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 911 ms
+2020-08-01 14:58:52.080  INFO 2648 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-01 14:58:52.136  INFO 2648 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-01 14:58:52.641  INFO 2648 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-01 14:58:52.646  INFO 2648 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 2.239 seconds (JVM running for 3.05)
+2020-08-01 14:58:57.495  INFO 2648 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651; token=17f59263-9d05-4ec3-903f-beae40eecd2a; JSESSIONID=AEC60D0DDA0F805DCD06319510BFD53A] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-01 14:58:57.502  INFO 2648 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-01 14:58:57.502  INFO 2648 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-01 14:58:57.510  INFO 2648 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-08-01 14:58:57.543  INFO 2648 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-01 14:58:57.615  INFO 2648 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-01 14:58:57.620 DEBUG 2648 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:58:57.631 DEBUG 2648 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:58:57.639 DEBUG 2648 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-01 14:58:57.939  WARN 2648 --- [http-nio-80-exec-1] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [294] milliseconds.
+2020-08-01 14:58:57.947  INFO 2648 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[]}
+2020-08-01 14:58:57.950  INFO 2648 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-01 14:58:58.138 DEBUG 2648 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-01 14:58:58.138 DEBUG 2648 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 17f59263-9d05-4ec3-903f-beae40eecd2a(String)
+2020-08-01 14:58:58.138 DEBUG 2648 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1

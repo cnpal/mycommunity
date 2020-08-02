@@ -3,7 +3,6 @@ package com.pal.community.controller;
 import com.pal.community.dto.CommentDTO;
 import com.pal.community.dto.QuestionDTO;
 import com.pal.community.enums.CommentTypeEnum;
-import com.pal.community.mapper.QuestionExtMapper;
 import com.pal.community.service.CommentService;
 import com.pal.community.service.QuestionService;
 import org.springframework.beans.factory.annotation.Autowired;
