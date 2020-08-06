@@ -1,0 +1,488 @@
+2020-08-03 10:48:16.627  INFO 12900 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 12900 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-03 10:48:16.631 DEBUG 12900 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-03 10:48:16.632  INFO 12900 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-03 10:48:18.442  INFO 12900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-03 10:48:18.450  INFO 12900 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-03 10:48:18.451  INFO 12900 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-03 10:48:18.576  INFO 12900 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-03 10:48:18.576  INFO 12900 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1906 ms
+2020-08-03 10:48:19.348  INFO 12900 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-03 10:48:19.417  INFO 12900 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-03 10:48:19.952  INFO 12900 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-03 10:48:19.955  INFO 12900 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 4.0 seconds (JVM running for 5.671)
+2020-08-03 10:48:32.314  INFO 12900 --- [http-nio-80-exec-1] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-03 10:48:32.320  INFO 12900 --- [http-nio-80-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-03 10:48:32.320  INFO 12900 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-03 10:48:32.330  INFO 12900 --- [http-nio-80-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-08-03 10:48:32.361  INFO 12900 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.IndexController.index', args=[org.apache.catalina.connector.RequestFacade@1eccdaef, {}, 1, 5]}
+2020-08-03 10:48:32.391  INFO 12900 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-03 10:48:32.618  INFO 12900 --- [http-nio-80-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-03 10:48:32.622 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION 
+2020-08-03 10:48:32.625 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION order by gmt_create desc 
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:32.641 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:32.656 DEBUG 12900 --- [http-nio-80-exec-1] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:32.656  INFO 12900 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : index
+2020-08-03 10:48:33.916  INFO 12900 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/error', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.CustomizeErrorController.errorHtml', args=[org.apache.catalina.core.ApplicationHttpRequest@1d4b5903, {}]}
+2020-08-03 10:48:33.918  INFO 12900 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Result : ModelAndView [view="error"; model=null]
+2020-08-03 10:48:37.250  INFO 12900 --- [http-nio-80-exec-5] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/callback', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.AuthorizeController.callback', args=[ed52194cd03644c0b965, 1, org.apache.catalina.connector.RequestFacade@1eccdaef, org.apache.catalina.connector.ResponseFacade@71d99813]}
+2020-08-03 10:48:44.960 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ACCOUNT_ID = ? ) 
+2020-08-03 10:48:44.960 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 56571425(String)
+2020-08-03 10:48:44.961 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:48:44.966 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.U.updateByExampleSelective       : ==>  Preparing: update USER SET NAME = ?, TOKEN = ?, GMT_MODIFIED = ?, BIO = ?, AVATAR_URL = ? WHERE ( ID = ? ) 
+2020-08-03 10:48:44.966 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.U.updateByExampleSelective       : ==> Parameters: 小白(String), aac3f9d5-0631-4222-af7e-47c5a465c0d9(String), 1596422924961(Long), keep coding(String), https://avatars0.githubusercontent.com/u/56571425?v=4(String), 2(Long)
+2020-08-03 10:48:45.067 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.U.updateByExampleSelective       : <==    Updates: 1
+2020-08-03 10:48:45.067  INFO 12900 --- [http-nio-80-exec-5] com.pal.community.aspect.LogAspect       : Result : redirect:/
+2020-08-03 10:48:45.079 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:48:45.079 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:48:45.080 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:48:45.394  WARN 12900 --- [http-nio-80-exec-9] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [297] milliseconds.
+2020-08-03 10:48:45.396  INFO 12900 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.IndexController.index', args=[org.apache.catalina.connector.RequestFacade@1eccdaef, {}, 1, 5]}
+2020-08-03 10:48:45.397 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION 
+2020-08-03 10:48:45.397 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2020-08-03 10:48:45.397 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:48:45.398 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION order by gmt_create desc 
+2020-08-03 10:48:45.398 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-08-03 10:48:45.399 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:45.399 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:45.400 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:45.400 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:45.400 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:45.400 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:45.401 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:45.401 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:45.401 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:45.401 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:45.402 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:45.402 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:45.402 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:45.403 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:45.403 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:45.404  INFO 12900 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Result : index
+2020-08-03 10:48:47.490 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:48:47.491 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:48:47.491 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:48:47.494  INFO 12900 --- [http-nio-80-exec-6] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/replies', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[replies, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:48:47.498 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:48:47.499 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:48:47.500 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:48:47.501 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:48:47.501 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:48:47.502 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:47.502 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:47.502 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:47.502 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:47.503 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:47.503 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:47.504 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:47.504 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:47.505 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:47.506 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:47.506 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:47.506 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:47.506 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:48:47.507 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:48:47.507 DEBUG 12900 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:48:47.507  INFO 12900 --- [http-nio-80-exec-6] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:26.413 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:26.413 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:26.413 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:26.414  INFO 12900 --- [http-nio-80-exec-2] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/questions', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[questions, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:26.415 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:26.415 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:26.416 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:26.416 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:26.416 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:26.419 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:26.419 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:26.419 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:26.421 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:26.422 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:26.422 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:26.422 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:26.422 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:26.422 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:26.423 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:26.423 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:26.423 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:26.423 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:26.423 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:26.423 DEBUG 12900 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:26.424  INFO 12900 --- [http-nio-80-exec-2] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:27.700 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:27.700 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:27.701 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:27.702  INFO 12900 --- [http-nio-80-exec-7] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/replies', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[replies, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:27.703 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:27.703 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:27.703 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:27.703 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:27.703 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:27.704 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:27.704 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:27.705 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:27.706 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:27.706 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:27.706 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:27.706 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:27.706 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:27.707 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:27.707 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:27.707 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:27.707 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:27.707 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:27.707 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:27.708 DEBUG 12900 --- [http-nio-80-exec-7] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:27.708  INFO 12900 --- [http-nio-80-exec-7] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:28.820 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:28.820 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:28.821 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:28.822  INFO 12900 --- [http-nio-80-exec-4] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/questions', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[questions, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:28.822 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:28.823 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:28.823 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:28.824 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:28.824 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:28.825 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:28.826 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:28.826 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:28.826 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:28.826 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:28.831 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:28.832 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:28.832 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:28.832 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:28.832 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:28.832 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:28.833 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:28.833 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:28.833 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:28.833 DEBUG 12900 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:28.833  INFO 12900 --- [http-nio-80-exec-4] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:29.776 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:29.777 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:29.777 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:29.778  INFO 12900 --- [http-nio-80-exec-8] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/replies', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[replies, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:29.779 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:29.779 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:29.780 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:29.781 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:29.781 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:29.782 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:29.782 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:29.782 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:29.782 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:29.782 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:29.782 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:29.783 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:29.783 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:29.783 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:29.783 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:29.783 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:29.783 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:29.784 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:29.784 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:29.784 DEBUG 12900 --- [http-nio-80-exec-8] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:29.784  INFO 12900 --- [http-nio-80-exec-8] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:30.858 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:30.858 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:30.859 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:30.859  INFO 12900 --- [http-nio-80-exec-10] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/questions', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[questions, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:30.860 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:30.860 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:30.861 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:30.862 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:30.863 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:30.863 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:30.864 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:30.864 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:30.864 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:30.864 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:30.864 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:30.864 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:30.864 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:30.865 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:30.865 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:30.865 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:30.865 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:30.866 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:30.866 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:30.866 DEBUG 12900 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:30.867  INFO 12900 --- [http-nio-80-exec-10] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:32.402 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:32.402 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:32.402 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:32.403  INFO 12900 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/replies', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[replies, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:32.404 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:32.404 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:32.404 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:32.405 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:32.405 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:32.406 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:32.406 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:32.407 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:32.407 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:32.407 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:32.407 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:32.407 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:32.407 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:32.408 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:32.408 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:32.408 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:32.408 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:32.408 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:32.408 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:32.408 DEBUG 12900 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:32.408  INFO 12900 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:33.718 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:33.718 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:33.719 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:33.719  INFO 12900 --- [http-nio-80-exec-5] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/questions', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[questions, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:33.720 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:33.720 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:33.720 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:33.722 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:33.722 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:33.724 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:33.725 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:33.725 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:33.725 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:33.725 DEBUG 12900 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:33.725  INFO 12900 --- [http-nio-80-exec-5] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 10:49:35.232 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 10:49:35.233 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 10:49:35.233 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 10:49:35.234  INFO 12900 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/replies', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[replies, org.apache.catalina.connector.RequestFacade@1eccdaef, 1, 5, {}]}
+2020-08-03 10:49:35.235 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:35.235 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 10:49:35.236 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 10:49:35.236 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 10:49:35.236 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 10:49:35.237 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:35.237 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:35.238 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:35.239 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:35.239 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:35.239 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 10:49:35.239 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 10:49:35.239 DEBUG 12900 --- [http-nio-80-exec-9] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 10:49:35.239  INFO 12900 --- [http-nio-80-exec-9] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 11:14:58.850  INFO 15680 --- [main] com.pal.community.CommunityApplication   : Starting CommunityApplication on LAPTOP-3TMQ3A72 with PID 15680 (D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity\target\classes started by panal in D:\panal\jetbrains\apps\IDEA-U\workspace\mycommunity)
+2020-08-03 11:14:58.853 DEBUG 15680 --- [main] com.pal.community.CommunityApplication   : Running with Spring Boot v2.2.1.RELEASE, Spring v5.2.1.RELEASE
+2020-08-03 11:14:58.854  INFO 15680 --- [main] com.pal.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2020-08-03 11:14:59.855  INFO 15680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 80 (http)
+2020-08-03 11:14:59.862  INFO 15680 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-03 11:14:59.862  INFO 15680 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.27]
+2020-08-03 11:14:59.925  INFO 15680 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-03 11:14:59.926  INFO 15680 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1023 ms
+2020-08-03 11:15:00.434  INFO 15680 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-08-03 11:15:00.495  INFO 15680 --- [main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2020-08-03 11:15:00.976  INFO 15680 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 80 (http) with context path ''
+2020-08-03 11:15:00.979  INFO 15680 --- [main] com.pal.community.CommunityApplication   : Started CommunityApplication in 2.526 seconds (JVM running for 3.383)
+2020-08-03 11:15:01.755  INFO 15680 --- [http-nio-80-exec-2] o.apache.tomcat.util.http.parser.Cookie  : A cookie header was received [1594595971,1594707651; token=aac3f9d5-0631-4222-af7e-47c5a465c0d9; JSESSIONID=86E8F71EA7B570FF0C1BA57AE2E9BBD9] that contained an invalid cookie. That cookie will be ignored.
+ Note: further occurrences of this error will be logged at DEBUG level.
+2020-08-03 11:15:01.763  INFO 15680 --- [http-nio-80-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-03 11:15:01.763  INFO 15680 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-03 11:15:01.773  INFO 15680 --- [http-nio-80-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 10 ms
+2020-08-03 11:15:01.814  INFO 15680 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2020-08-03 11:15:01.910  INFO 15680 --- [http-nio-80-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2020-08-03 11:15:01.917 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:01.930 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:01.944 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:02.276  WARN 15680 --- [http-nio-80-exec-2] o.a.c.util.SessionIdGeneratorBase        : Creation of SecureRandom instance for session ID generation using [SHA1PRNG] took [324] milliseconds.
+2020-08-03 11:15:02.293  INFO 15680 --- [http-nio-80-exec-2] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/replies', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[replies, org.apache.catalina.connector.RequestFacade@7cbddab3, 1, 5, {}]}
+2020-08-03 11:15:02.299 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 11:15:02.300 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 11:15:02.302 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 11:15:02.302 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 11:15:02.302 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 11:15:02.304 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:02.304 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:02.304 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:02.309 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:02.309 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:02.309 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:02.309 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:02.310 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:02.310 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:02.310 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:02.310 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:02.311 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:02.311 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:02.311 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:02.312 DEBUG 15680 --- [http-nio-80-exec-2] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:02.312  INFO 15680 --- [http-nio-80-exec-2] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 11:15:05.798 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:05.798 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:05.799 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:05.800  INFO 15680 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/replies', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[replies, org.apache.catalina.connector.RequestFacade@7cbddab3, 1, 5, {}]}
+2020-08-03 11:15:05.800 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 11:15:05.801 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 11:15:05.801 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 11:15:05.802 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 11:15:05.802 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 11:15:05.804 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:05.804 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:05.805 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:05.805 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:05.806 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:05.806 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:05.806 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:05.806 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:05.807 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:05.807 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:05.807 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:05.807 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:05.808 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:05.808 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:05.809 DEBUG 15680 --- [http-nio-80-exec-3] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:05.809  INFO 15680 --- [http-nio-80-exec-3] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 11:15:08.547 DEBUG 15680 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:08.547 DEBUG 15680 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:08.548 DEBUG 15680 --- [http-nio-80-exec-1] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:08.550  INFO 15680 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/publish', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.PublishController.publish', args=[{}]}
+2020-08-03 11:15:08.558  INFO 15680 --- [http-nio-80-exec-1] com.pal.community.aspect.LogAspect       : Result : publish
+2020-08-03 11:15:08.694 DEBUG 15680 --- [http-nio-80-exec-7] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:08.694 DEBUG 15680 --- [http-nio-80-exec-7] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:08.695 DEBUG 15680 --- [http-nio-80-exec-7] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:15.869 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:15.869 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:15.870 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:15.871  INFO 15680 --- [http-nio-80-exec-5] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/profile/questions', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.ProfileController.profile', args=[questions, org.apache.catalina.connector.RequestFacade@7cbddab3, 1, 5, {}]}
+2020-08-03 11:15:15.871 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 11:15:15.871 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 2(Long)
+2020-08-03 11:15:15.872 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 11:15:15.873 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION WHERE ( CREATOR = ? ) 
+2020-08-03 11:15:15.873 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 2(Long)
+2020-08-03 11:15:15.874 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:15.874 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:15.876 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:15.876 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:15.876 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:15.877 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:15.877 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:15.877 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:15.877 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:15.877 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:15.877 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:15.878 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:15.878 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:15.878 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:15.878 DEBUG 15680 --- [http-nio-80-exec-5] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:15.878  INFO 15680 --- [http-nio-80-exec-5] com.pal.community.aspect.LogAspect       : Result : profile
+2020-08-03 11:15:21.158 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:21.158 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:21.159 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:21.161  INFO 15680 --- [http-nio-80-exec-6] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.IndexController.index', args=[org.apache.catalina.connector.RequestFacade@7cbddab3, {}, 1, 5]}
+2020-08-03 11:15:21.163 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.QuestionMapper.countByExample    : ==>  Preparing: select count(*) from QUESTION 
+2020-08-03 11:15:21.163 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.QuestionMapper.countByExample    : ==> Parameters: 
+2020-08-03 11:15:21.164 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.QuestionMapper.countByExample    : <==      Total: 1
+2020-08-03 11:15:21.164 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.Q.selectByExampleWithRowbounds   : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS from QUESTION order by gmt_create desc 
+2020-08-03 11:15:21.164 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.Q.selectByExampleWithRowbounds   : ==> Parameters: 
+2020-08-03 11:15:21.166 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:21.166 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:21.167 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:21.169 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:21.169 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:21.169 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:21.169 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:21.169 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:21.169 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:21.170 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:21.170 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:21.170 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:21.170 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:21.170 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:21.170 DEBUG 15680 --- [http-nio-80-exec-6] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:21.171  INFO 15680 --- [http-nio-80-exec-6] com.pal.community.aspect.LogAspect       : Result : index
+2020-08-03 11:15:22.452 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:22.453 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:22.453 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:22.455  INFO 15680 --- [http-nio-80-exec-4] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/question/132', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.QuestionController.question', args=[132, {}]}
+2020-08-03 11:15:22.457 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS , DESCRIPTION from QUESTION where ID = ? 
+2020-08-03 11:15:22.458 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.Q.selectByPrimaryKey             : ==> Parameters: 132(Long)
+2020-08-03 11:15:22.459 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.Q.selectByPrimaryKey             : <==      Total: 1
+2020-08-03 11:15:22.460 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:22.460 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:22.460 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:22.461 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.QuestionExtMapper.selectRelated  : ==>  Preparing: select * from QUESTION where id != ? and TAGS regexp ? 
+2020-08-03 11:15:22.462 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.QuestionExtMapper.selectRelated  : ==> Parameters: 132(Long), js|php(String)
+2020-08-03 11:15:22.463 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.QuestionExtMapper.selectRelated  : <==      Total: 2
+2020-08-03 11:15:22.468 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.CommentMapper.selectByExample    : ==>  Preparing: select ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, COMMENT_COUNT from COMMENT WHERE ( PARENT_ID = ? and TYPE = ? ) order by gmt_create desc 
+2020-08-03 11:15:22.468 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.CommentMapper.selectByExample    : ==> Parameters: 132(Long), 1(Integer)
+2020-08-03 11:15:22.469 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.m.CommentMapper.selectByExample    : <==      Total: 0
+2020-08-03 11:15:22.469 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.mapper.QuestionExtMapper.incView   : ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where ID = ? 
+2020-08-03 11:15:22.470 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.mapper.QuestionExtMapper.incView   : ==> Parameters: 1(Integer), 132(Long)
+2020-08-03 11:15:22.565 DEBUG 15680 --- [http-nio-80-exec-4] c.p.c.mapper.QuestionExtMapper.incView   : <==    Updates: 1
+2020-08-03 11:15:22.565  INFO 15680 --- [http-nio-80-exec-4] com.pal.community.aspect.LogAspect       : Result : question
+2020-08-03 11:15:39.632 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:39.632 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:39.632 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:39.802  INFO 15680 --- [http-nio-80-exec-8] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/comment', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.CommentController.post', args=[CommentCreatorDTO(parentId=132, content=标签
+, type=1), org.apache.catalina.connector.RequestFacade@7cbddab3]}
+2020-08-03 11:15:39.808 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS , DESCRIPTION from QUESTION where ID = ? 
+2020-08-03 11:15:39.808 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.m.Q.selectByPrimaryKey             : ==> Parameters: 132(Long)
+2020-08-03 11:15:39.809 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.m.Q.selectByPrimaryKey             : <==      Total: 1
+2020-08-03 11:15:39.809 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.mapper.CommentMapper.insert        : ==>  Preparing: insert into COMMENT (ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, COMMENT_COUNT ) values (?, ?, ?, ?, ?, ?, ?, ?, ? ) 
+2020-08-03 11:15:39.810 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.mapper.CommentMapper.insert        : ==> Parameters: null, 132(Long), 1(Integer), 2(Long), 1596424539804(Long), 1596424539804(Long), 0(Long), 标签(String), 0(Integer)
+2020-08-03 11:15:39.811 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.mapper.CommentMapper.insert        : <==    Updates: 1
+2020-08-03 11:15:39.811 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.m.QuestionExtMapper.incComment     : ==>  Preparing: update QUESTION set COMMENT_COUNT = COMMENT_COUNT + ? where ID = ? 
+2020-08-03 11:15:39.811 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.m.QuestionExtMapper.incComment     : ==> Parameters: 1(Integer), 132(Long)
+2020-08-03 11:15:39.813 DEBUG 15680 --- [http-nio-80-exec-8] c.p.c.m.QuestionExtMapper.incComment     : <==    Updates: 1
+2020-08-03 11:15:39.814  INFO 15680 --- [http-nio-80-exec-8] com.pal.community.aspect.LogAspect       : Result : ResultDTO(code=200, message=请求成功, data=null)
+2020-08-03 11:15:39.841 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( TOKEN = ? ) 
+2020-08-03 11:15:39.841 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: aac3f9d5-0631-4222-af7e-47c5a465c0d9(String)
+2020-08-03 11:15:39.842 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:39.842  INFO 15680 --- [http-nio-80-exec-10] com.pal.community.aspect.LogAspect       : Request : {url='http://localhost/question/132', ip='0:0:0:0:0:0:0:1', classMethod='com.pal.community.controller.QuestionController.question', args=[132, {}]}
+2020-08-03 11:15:39.842 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.Q.selectByPrimaryKey             : ==>  Preparing: select ID, TITLE, GMT_CREATE, GMT_MODIFIED, CREATOR, COMMENT_COUNT, VIEW_COUNT, LIKE_COUNT, TAGS , DESCRIPTION from QUESTION where ID = ? 
+2020-08-03 11:15:39.843 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.Q.selectByPrimaryKey             : ==> Parameters: 132(Long)
+2020-08-03 11:15:39.843 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.Q.selectByPrimaryKey             : <==      Total: 1
+2020-08-03 11:15:39.844 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER where ID = ? 
+2020-08-03 11:15:39.844 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : ==> Parameters: 2(Long)
+2020-08-03 11:15:39.845 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.UserMapper.selectByPrimaryKey    : <==      Total: 1
+2020-08-03 11:15:39.845 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.QuestionExtMapper.selectRelated  : ==>  Preparing: select * from QUESTION where id != ? and TAGS regexp ? 
+2020-08-03 11:15:39.846 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.QuestionExtMapper.selectRelated  : ==> Parameters: 132(Long), js|php(String)
+2020-08-03 11:15:39.847 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.QuestionExtMapper.selectRelated  : <==      Total: 2
+2020-08-03 11:15:39.848 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.CommentMapper.selectByExample    : ==>  Preparing: select ID, PARENT_ID, TYPE, COMMENTATOR, GMT_CREATE, GMT_MODIFIED, LIKE_COUNT, CONTENT, COMMENT_COUNT from COMMENT WHERE ( PARENT_ID = ? and TYPE = ? ) order by gmt_create desc 
+2020-08-03 11:15:39.849 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.CommentMapper.selectByExample    : ==> Parameters: 132(Long), 1(Integer)
+2020-08-03 11:15:39.849 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.m.CommentMapper.selectByExample    : <==      Total: 1
+2020-08-03 11:15:39.851 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : ==>  Preparing: select ID, ACCOUNT_ID, NAME, TOKEN, GMT_CREATE, GMT_MODIFIED, BIO, AVATAR_URL from USER WHERE ( ID in ( ? ) ) 
+2020-08-03 11:15:39.853 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : ==> Parameters: 2(Long)
+2020-08-03 11:15:39.853 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.UserMapper.selectByExample  : <==      Total: 1
+2020-08-03 11:15:39.859 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.QuestionExtMapper.incView   : ==>  Preparing: update QUESTION set VIEW_COUNT = VIEW_COUNT + ? where ID = ? 
+2020-08-03 11:15:39.859 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.QuestionExtMapper.incView   : ==> Parameters: 1(Integer), 132(Long)
+2020-08-03 11:15:39.860 DEBUG 15680 --- [http-nio-80-exec-10] c.p.c.mapper.QuestionExtMapper.incView   : <==    Updates: 1
+2020-08-03 11:15:39.860  INFO 15680 --- [http-nio-80-exec-10] com.pal.community.aspect.LogAspect       : Result : question

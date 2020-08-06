@@ -106,6 +106,7 @@ function collapseComments(e) {
 }
 function showSelectTag() {
     $("#selectTag").show()
+    console.log(show)
 }
 
 function selectTag(e) {
